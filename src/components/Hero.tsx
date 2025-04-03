@@ -3,6 +3,7 @@ import React from 'react';
 import { Check } from 'lucide-react';
 import Button from './Button';
 import FeatureItem from './FeatureItem';
+import { Link } from 'react-router-dom';
 
 const Hero = () => {
   return (
@@ -21,13 +22,15 @@ const Hero = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4 mb-16 animate-fade-in-up" style={{ animationDelay: '200ms' }}>
-            <Button 
-              variant="primary" 
-              size="lg" 
-              className="shadow-lg shadow-blue-200"
-            >
-              Analyze Your Video
-            </Button>
+            <Link to="/auth">
+              <Button 
+                variant="primary" 
+                size="lg" 
+                className="shadow-lg shadow-blue-200"
+              >
+                Analyze Your Video
+              </Button>
+            </Link>
             <Button 
               variant="secondary" 
               size="lg"
